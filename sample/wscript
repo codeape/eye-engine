@@ -1,12 +1,13 @@
 def configure(ctx):
     print("sample configure")
     ctx.standard_defs()
+    ctx.libckok('libsfml', 'SFML/Graphics.hpp')
     ctx.write_config_header('config.h')
 
 def build(ctx):
     libs = []
     if ("LINUX" == ctx.env.DEST_OS.upper()):
-        libs = []
+        libs = ['sfml-graphics', 'sfml-window', 'sfml-system']
     elif ("DARWIN" == ctx.env.DEST_OS.upper()):
         libs = []
     ctx.program(
