@@ -1,0 +1,20 @@
+def configure(ctx):
+    print("sample configure")
+    ctx.standard_defs()
+    ctx.write_config_header('config.h')
+
+def build(ctx):
+    libs = []
+    if ("LINUX" == ctx.env.DEST_OS.upper()):
+        libs = []
+    elif ("DARWIN" == ctx.env.DEST_OS.upper()):
+        libs = []
+    ctx.program(
+        source = 'main.cpp',
+        target = 'sample',
+        includes = '.',
+        lib = libs,
+        libpath = ['/usr/lib', '/usr/local/lib'],
+        cflags = [ '-Wall', '-g' ],
+        use = 'intern_enginelib_st'
+    )

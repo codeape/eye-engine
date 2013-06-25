@@ -1,0 +1,22 @@
+def configure(ctx):
+    print("Enigine configure")
+    ctx.standard_defs()
+    ctx.write_config_header('config.h')
+
+def build(ctx):
+    ctx.shlib(
+        target = 'enginelib',
+        export_includes = '.',
+        includes = '.',
+        source = ['EngContainer.cpp', 'EngObserver.cpp', 'EngSubject.cpp'],
+        cflags = [ '-Wall', '-g' ],
+        name = "intern_enginelib_sh"
+    )
+    ctx.stlib(
+        target = 'enginelib',
+        export_includes = '.',
+        includes = '.',
+        source = ['EngContainer.cpp', 'EngObserver.cpp', 'EngSubject.cpp'],
+        cflags = [ '-Wall', '-g' ],
+        name = "intern_enginelib_st"
+    )
