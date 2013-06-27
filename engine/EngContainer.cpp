@@ -2,7 +2,6 @@
 
 #include <iterator>
 
-/* Container */
 EngContainer::EngContainer() {}
 
 EngContainer::~EngContainer(){}

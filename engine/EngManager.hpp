@@ -4,7 +4,9 @@
 class EngManager {
 public:
     EngManager();
-    ~EngManager();
+    virtual ~EngManager();
+
+    virtual void startLoop() = 0;
 };
 
 #endif
