@@ -1,10 +1,13 @@
 #ifndef ENGSUBJECT_HPP
 #define ENGSUBJECT_HPP
 
-#include "EngObserver.hpp"
+#include "EngComponent.hpp"
+
 #include <set>
 
-class EngSubject {
+class EngObserver;
+
+class EngSubject : public EngComponent {
 public:
     EngSubject();
     ~EngSubject();

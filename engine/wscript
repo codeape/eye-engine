@@ -4,11 +4,16 @@ def configure(ctx):
     ctx.write_config_header('config.h')
 
 def build(ctx):
+    source_files = ['EngContainer.cpp',
+                    'EngObserver.cpp',
+                    'EngSubject.cpp',
+                    'EngComponent.cpp',
+                    'EngManager.cpp']
     ctx.shlib(
         target = 'enginelib',
         export_includes = '.',
         includes = '.',
-        source = ['EngContainer.cpp', 'EngObserver.cpp', 'EngSubject.cpp'],
+        source = source_files,
         cflags = [ '-Wall', '-g' ],
         name = "intern_enginelib_sh"
     )
@@ -16,7 +21,7 @@ def build(ctx):
         target = 'enginelib',
         export_includes = '.',
         includes = '.',
-        source = ['EngContainer.cpp', 'EngObserver.cpp', 'EngSubject.cpp'],
+        source = source_files,
         cflags = [ '-Wall', '-g' ],
         name = "intern_enginelib_st"
     )

@@ -1,4 +1,5 @@
 #include "EngSubject.hpp"
+#include "EngObserver.hpp"
 
 #include <algorithm>
 
@@ -10,11 +11,11 @@ EngSubject::~EngSubject(){
     unlinkObservers();
 }
 
-void updateObserverItem(EngObserver * aObserver) {
+void updateObserverItem(EngObserver *aObserver) {
     aObserver->update();
 }
 
-void unlinkObserverItem(EngObserver * aObserver) {
+void unlinkObserverItem(EngObserver *aObserver) {
     aObserver->unlink();
 }
 

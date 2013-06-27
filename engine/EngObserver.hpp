@@ -1,7 +1,10 @@
 #ifndef ENGOBSERVER_HPP
 #define ENGOBSERVER_HPP
 
-class EngObserver {
+#include "EngComponent.hpp"
+#include "EngSubject.hpp"
+
+class EngObserver : public EngComponent {
 public:
     EngObserver();
     virtual ~EngObserver();

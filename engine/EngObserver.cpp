@@ -8,6 +8,10 @@ EngObserver::~EngObserver() {
 
 }
 
+void EngObserver::unlink() {
+    this->unlinkObserver();
+}
+
 void EngObserver::update() {
     if (!mObserverCalled) {
         this->mObserverCalled = true;
