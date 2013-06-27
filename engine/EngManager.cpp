@@ -1,5 +1,9 @@
 #include "EngManager.hpp"
 
-class EngManager {
+EngManager::EngManager() {
 
-};
+}
+
+EngManager::~EngManager() {
+
+}
