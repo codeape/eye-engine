@@ -4,6 +4,7 @@
 #include "EngManager.hpp"
 
 class SfmlManager  : public EngManager {
+public:
     SfmlManager();
     virtual ~SfmlManager();
 
