@@ -8,8 +8,7 @@ def build(ctx):
                     'EngObserver.cpp',
                     'EngSubject.cpp',
                     'EngComponent.cpp',
-                    'EngManager.cpp',
-                    'SfmlManager.cpp']
+                    'EngManager.cpp']
     ctx.shlib(
         target = 'enginelib',
         export_includes = '.',
