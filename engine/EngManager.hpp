@@ -11,8 +11,11 @@ public:
     virtual ~EngManager();
 
     virtual void startLoop();
+
+    virtual void addContainer(EngContainer *);
+    void updateContainers(EngContainer *);
 private:
-    std::vector<EngContainer *> containers; // vector instead
+    std::vector<EngContainer *> containers;
 };
 
 #endif

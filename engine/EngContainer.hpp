@@ -5,6 +5,8 @@ class EngContainer {
 public:
     EngContainer();
     virtual ~EngContainer();
+
+    virtual void update() = 0;
 };
 
 #endif
