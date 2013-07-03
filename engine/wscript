@@ -4,6 +4,11 @@ def configure(ctx):
     ctx.write_config_header('config.h')
 
 def build(ctx):
+    libs = []
+    if ("LINUX" == ctx.env.DEST_OS.upper()):
+        libs = ['sfml-graphics', 'sfml-window', 'sfml-system']
+    elif ("DARWIN" == ctx.env.DEST_OS.upper()):
+        libs = ['sfml-graphics', 'sfml-window', 'sfml-system']
     source_files = ['EngContainer.cpp',
                     'EngObserver.cpp',
                     'EngSubject.cpp',
@@ -13,6 +18,7 @@ def build(ctx):
         target = 'enginelib',
         export_includes = '.',
         includes = '.',
+        lib = libs,
         source = source_files,
         cflags = [ '-Wall', '-g' ],
         name = "intern_enginelib_sh"
@@ -21,6 +27,7 @@ def build(ctx):
         target = 'enginelib',
         export_includes = '.',
         includes = '.',
+        lib = libs,
         source = source_files,
         cflags = [ '-Wall', '-g' ],
         name = "intern_enginelib_st"

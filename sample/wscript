@@ -9,7 +9,7 @@ def build(ctx):
     if ("LINUX" == ctx.env.DEST_OS.upper()):
         libs = ['sfml-graphics', 'sfml-window', 'sfml-system']
     elif ("DARWIN" == ctx.env.DEST_OS.upper()):
-        libs = []
+        libs = ['sfml-graphics', 'sfml-window', 'sfml-system']
     ctx.program(
         source = 'main.cpp',
         target = 'sample',
