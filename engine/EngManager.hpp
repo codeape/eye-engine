@@ -1,9 +1,11 @@
 #ifndef ENGMANAGER_HPP
 #define ENGMANAGER_HPP
 
-#include "EngContainer.hpp"
+#include <SFML/Graphics.hpp>
 
 #include <vector>
+
+class EngContainer;
 
 class EngManager {
 public:
@@ -16,6 +18,7 @@ public:
     void updateContainers(EngContainer *);
 private:
     std::vector<EngContainer *> containers;
+    sf::RenderWindow *win;
 };
 
 #endif

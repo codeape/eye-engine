@@ -1,8 +1,21 @@
 #include "EngContainer.hpp"
 
-#include <iterator>
+EngContainer::EngContainer() {
+    components = NULL;
+}
 
-EngContainer::EngContainer() {}
+EngContainer::~EngContainer(){
+    if ( NULL != components ) {
+        delete( components );
+    }
+}
 
-EngContainer::~EngContainer(){}
+// separate loop for default container vector?
+
+void EngContainer::addcomponent(EngComponent *) {
+    if ( NULL == components ) {
+        components = new std::vector<EngComponent *>();
+    }
+    
+}
 

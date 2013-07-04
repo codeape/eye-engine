@@ -1,11 +1,11 @@
 #include "EngManager.hpp"
+#include "EngContainer.hpp"
 
 #include <algorithm>
-#include <SFML/Graphics.hpp>
 
-
-EngManager::EngManager() {
-
+EngManager::EngManager() : containers(){
+    win = NULL;
+    containers.reserve(50);
 }
 
 EngManager::~EngManager() {
@@ -13,12 +13,13 @@ EngManager::~EngManager() {
 }
 
 void EngManager::updateContainers(EngContainer *container) {
-    container->update();
+    container->update(win);
 }
 
 
 void EngManager::startLoop() {
     sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
+    win = &window;
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
 

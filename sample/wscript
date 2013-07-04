@@ -11,7 +11,7 @@ def build(ctx):
     elif ("DARWIN" == ctx.env.DEST_OS.upper()):
         libs = ['sfml-graphics', 'sfml-window', 'sfml-system']
     ctx.program(
-        source = 'main.cpp',
+        source = ['main.cpp', 'Player.cpp'],
         target = 'sample',
         includes = '.',
         lib = libs,
