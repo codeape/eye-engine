@@ -13,7 +13,7 @@ void EngObserver::unlink() {
 }
 
 void EngObserver::update() {
-    if (!mObserverCalled) {
+    if ( !mObserverCalled ) {
         this->mObserverCalled = true;
         this->updateObserver();
         this->mObserverCalled = false;

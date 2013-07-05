@@ -12,10 +12,9 @@ EngContainer::~EngContainer(){
 
 // separate loop for default container vector?
 
-void EngContainer::addcomponent(EngComponent *) {
+void EngContainer::addcomponent( EngComponent * ) {
     if ( NULL == components ) {
         components = new std::vector<EngComponent *>();
     }
-    
 }
 

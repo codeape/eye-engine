@@ -3,8 +3,8 @@
 
 class EngComponent {
 public:
-    virtual ~EngComponent();
-    virtual void update() = 0;
+    virtual         ~EngComponent();
+    virtual void    update() = 0;
 };
 
 #endif

@@ -9,16 +9,16 @@ class EngContainer;
 
 class EngManager {
 public:
-    EngManager();
-    virtual ~EngManager();
+                                EngManager();
+    virtual                     ~EngManager();
 
-    virtual void startLoop();
+    virtual void                startLoop();
 
-    virtual void addContainer(EngContainer *);
-    void updateContainers(EngContainer *);
+    virtual void                addContainer( EngContainer * );
+    void                        updateContainers( EngContainer * );
 private:
     std::vector<EngContainer *> containers;
-    sf::RenderWindow *win;
+    sf::RenderWindow *          win;
 };
 
 #endif

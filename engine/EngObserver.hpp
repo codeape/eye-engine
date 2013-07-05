@@ -6,15 +6,15 @@
 
 class EngObserver : public EngComponent {
 public:
-    EngObserver();
-    virtual ~EngObserver();
-    void update();
-    void unlink();
+                    EngObserver();
+    virtual         ~EngObserver();
+    void            update();
+    void            unlink();
 protected:
-    virtual void updateObserver() = 0;
-    virtual void unlinkObserver() = 0;
+    virtual void    updateObserver() = 0;
+    virtual void    unlinkObserver() = 0;
 private:
-    bool mObserverCalled;
+    bool            mObserverCalled;
 };
 
 #endif

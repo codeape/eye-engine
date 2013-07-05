@@ -8,10 +8,10 @@ class EngComponent;
 
 class EngContainer {
 public:
-    EngContainer();
-    virtual ~EngContainer();
-    virtual void addcomponent(EngComponent *);
-    virtual void update(sf::RenderWindow *) = 0;
+                                 EngContainer();
+    virtual                      ~EngContainer();
+    virtual void                 addcomponent( EngComponent * );
+    virtual void                 update( sf::RenderWindow * ) = 0;
 private:
     std::vector<EngComponent *> *components;
 };

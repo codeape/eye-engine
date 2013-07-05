@@ -5,9 +5,9 @@
 
 class Player : public EngContainer {
 public:
-    Player();
-    ~Player();
-    void update(sf::RenderWindow *);
+            Player();
+            ~Player();
+    void    update( sf::RenderWindow * );
 };
 
 #endif

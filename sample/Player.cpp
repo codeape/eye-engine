@@ -8,6 +8,6 @@ Player::~Player(){
 
 }
 
-void Player::update(sf::RenderWindow *) {
+void Player::update( sf::RenderWindow * ) {
 
 }

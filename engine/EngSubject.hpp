@@ -9,13 +9,13 @@ class EngObserver;
 
 class EngSubject : public EngComponent {
 public:
-    EngSubject();
-    ~EngSubject();
-    bool addObserver(EngObserver *);
-    bool removeObserver(EngObserver *);
+                            EngSubject();
+                            ~EngSubject();
+    bool                    addObserver( EngObserver * );
+    bool                    removeObserver( EngObserver * );
 protected:
-    void updateObservers();
-    void unlinkObservers();
+    void                    updateObservers();
+    void                    unlinkObservers();
 private:
     std::set<EngObserver *> mObservers;
 };
