@@ -11,7 +11,7 @@ public:
                                  EngContainer();
     virtual                      ~EngContainer();
     virtual void                 addcomponent( EngComponent * );
-    virtual void                 update( sf::RenderWindow * ) = 0;
+    virtual void                 update( sf::RenderWindow * );
 private:
     std::vector<EngComponent *> *components;
 };

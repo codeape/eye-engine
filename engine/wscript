@@ -13,7 +13,8 @@ def build(ctx):
                     'EngObserver.cpp',
                     'EngSubject.cpp',
                     'EngComponent.cpp',
-                    'EngManager.cpp']
+                    'EngManager.cpp',
+                    'EngKeyboardComp.cpp']
     ctx.shlib(
         target = 'enginelib',
         export_includes = '.',

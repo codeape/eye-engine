@@ -7,7 +7,6 @@ class Player : public EngContainer {
 public:
             Player();
             ~Player();
-    void    update( sf::RenderWindow * );
 };
 
 #endif
