@@ -27,6 +27,9 @@ void EngContainer::addcomponent( EngComponent *component ) {
 }
 
 void EngContainer::update( sf::RenderWindow * ) {
+    if ( NULL == components ) {
+        return;
+    }
     std::for_each( components->begin(), components->end(), updateContainerItem );
 }
 
