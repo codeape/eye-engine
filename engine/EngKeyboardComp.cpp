@@ -1,10 +1,22 @@
 #include "EngKeyboardComp.hpp"
 
-#include <iostream>
-#include <SFML/Window/Keyboard.hpp>
+EngKeyboardComp::EngKeyboardComp() : keys() {
+
+}
+
+EngKeyboardComp::~EngKeyboardComp() {
+
+}
+
+void  EngKeyboardComp::registerKey(sf::Keyboard::Key key, int val) {
+    keys[key] = val;
+}
 
 void EngKeyboardComp::update() {
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-        std::cout << "Left " << std::endl;
+    std::map<sf::Keyboard::Key, int>::iterator it;
+    for ( it = keys.begin(); it != keys.end(); ++it ) {
+        if (sf::Keyboard::isKeyPressed(it->first)) {
+            // update on it->second;
+        }
     }
 }
