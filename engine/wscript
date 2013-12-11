@@ -14,7 +14,8 @@ def build(ctx):
                     'EngSubject.cpp',
                     'EngComponent.cpp',
                     'EngManager.cpp',
-                    'EngKeyboardComp.cpp']
+                    'EngKeyboardComp.cpp',
+                    'PseudoRNG.cpp']
     ctx.shlib(
         target = 'enginelib',
         export_includes = '.',
